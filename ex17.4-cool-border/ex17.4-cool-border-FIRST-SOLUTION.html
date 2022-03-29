@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Border</title>
+    <style>
+      body {
+        background: black;
+      }
+
+      .parent:after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 120px;
+        background: black;
+        margin-top: 10px;
+        /* border: 2px rgb(194, 102, 211) solid; */
+      }
+
+      .parent:before {
+        content: "";
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        border: 2px solid red;
+        margin-left: 25px;
+        padding-bottom: 25px;
+      }
+
+      .parent_2:after {
+        content: "";
+        width: 200px;
+        height: 300px;
+        margin-left: 50px;
+        /* border: 1px solid rgb(221, 215, 160); */
+        background: black;
+        position: absolute;
+      }
+
+      .parent_2:before {
+        content: "Cool Border";
+        color: white;
+        position: absolute;
+        z-index: 1;
+        font-size: 20px;
+        padding: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="parent">
+      <section class="parent_2"></section>
+      <h1>Cool Border</h1>
+    </section>
+  </body>
+</html>

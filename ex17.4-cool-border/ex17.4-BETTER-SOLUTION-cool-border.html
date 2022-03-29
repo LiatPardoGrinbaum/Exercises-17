@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Border</title>
+    <style>
+      body {
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+      }
+
+      .container {
+        position: relative;
+        padding: 2rem;
+        /* border: blue solid 1px; */
+      }
+
+      h2 {
+        color: white;
+      }
+
+      .border_top:after {
+        content: "";
+        position: absolute;
+        top: 10px; /*distance from the container border top */
+        right: -5px;
+        height: 20px;
+        width: 20px;
+        border-top: red solid 3px;
+        border-right: red solid 3px;
+      }
+
+      .border_top:before {
+        content: "";
+        position: absolute;
+        top: 10px; /*distance from the container border top */
+        left: -5px;
+        height: 20px;
+        width: 20px;
+        border-top: red solid 3px;
+        border-left: red solid 3px;
+      }
+
+      .border_bottom:after {
+        content: "";
+        position: absolute;
+        bottom: 10px; /*distance from the container border top */
+        right: -5px;
+        height: 20px;
+        width: 20px;
+        border-bottom: red solid 3px;
+        border-right: red solid 3px;
+      }
+
+      .border_bottom:before {
+        content: "";
+        position: absolute;
+        bottom: 10px; /*distance from the container border top */
+        left: -5px;
+        height: 20px;
+        width: 20px;
+        border-bottom: red solid 3px;
+        border-left: red solid 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="border_top"></span>
+      <h2>Cool Border</h2>
+      <span class="border_bottom"></span>
+    </div>
+  </body>
+</html>

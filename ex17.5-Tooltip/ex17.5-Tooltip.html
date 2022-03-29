@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Href Attributes</title>
+    <style>
+      /* a[href]:after {
+        content: " website (http://www.google.com)";
+        color: blueviolet;
+      } */
+      /*
+      .tooltip span[data-tooltip="data"] {
+        color: blueviolet;
+        font-weight: bolder;
+      } */
+      .box {
+        max-width: 50%;
+        margin: auto;
+        /* border: black solid 2px; */
+        background: rgb(254, 255, 216);
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+      }
+
+      .tooltip {
+        position: relative;
+        color: rgb(179, 0, 179);
+        font-weight: bold;
+        width: 50%;
+        padding: 15px 0px;
+        /* border: red solid 1px; */
+      }
+
+      .tooltip:before {
+        content: attr(data-tooltip); /* will show the data when hovering */
+        position: absolute;
+        top: -30%;
+        left: -20%;
+        margin-left: 20px;
+        width: 200px;
+        padding: 5px;
+        border-radius: 20px;
+        background: rgb(63, 163, 194);
+        font-weight: lighter;
+        color: #fff;
+        text-align: center;
+        display: none;
+      }
+
+      .tooltip:hover:before {
+        display: block;
+      }
+
+      /* defining the arrow */
+      .tooltip:after {
+        content: "";
+        position: absolute;
+        top: 28%;
+        left: 60%;
+        margin-left: -5px;
+        border-width: 6px; /* size of arrow */
+        border-style: solid;
+        border-color: rgb(63, 163, 194) transparent transparent transparent; /* only one corner display- as the arrow */
+        display: none;
+      }
+
+      .tooltip:hover:after {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        adipisci, ad incidunt beatae corrupti est quam quis? Amet, id
+        soluta?<span data-tooltip="It's so cool!" class="tooltip"
+          >Lorem ipsum</span
+        >
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium,
+        et molestias vitae non ea ipsam dolorem soluta error in iste repudiandae
+        possimus sequi consequuntur maxime, libero doloribus enim praesentium
+        dolore veniam quod at, tenetur ducimus corporis quisquam! Enim, velit
+        dicta!<span
+          data-tooltip="That's a nice tooltip, isn't it?"
+          class="tooltip"
+          >corrupti est</span
+        >
+        quam quis? Amet, id soluta?Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Eveniet, et. dolor, sit amet consectetur adipisicing
+        elit. Cupiditate, nesciunt.
+      </p>
+    </div>
+  </body>
+</html>
